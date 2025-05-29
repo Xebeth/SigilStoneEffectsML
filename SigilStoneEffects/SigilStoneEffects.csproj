@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <FileVersion>1.0.0</FileVersion>
+        <AssemblyName>SigilStoneEffects</AssemblyName>
+        <RootNamespace>SigilStoneEffects</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="$(SolutionDir)readme.md">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="$(SolutionDir)LICENSE">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="$(SolutionDir)readme.md" />
+        <None Include="$(SolutionDir)LICENSE" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InputItems Include="$(SolutionDir)Input\**" Exclude="$(SolutionDir)Input\.gitignore;$(SolutionDir)Input\readme.txt">
+            <InProject>false</InProject>
+        </InputItems>
+        <ReadmeFile Include="$(SolutionDir)readme.md">
+            <InProject>false</InProject>
+        </ReadmeFile>
+        <ReadmeFile Include="$(SolutionDir)LICENSE">
+            <InProject>false</InProject>
+        </ReadmeFile>
+    </ItemGroup>
+
+    <Target Name="Prepublish documentation" BeforeTargets="PrepareForPublish">
+        <Copy SourceFiles="@(ReadmeFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+        <Copy SourceFiles="@(LicenseFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+    </Target>
+
+    <Target Name="Copy input files" AfterTargets="Build">
+        <Copy SourceFiles="@(InputItems)" DestinationFiles="@(InputItems->'$(OutputPath)\Input\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    </Target>
+
+</Project>

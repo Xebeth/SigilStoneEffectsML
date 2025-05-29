@@ -1,0 +1,10 @@
+<Project>
+ <PropertyGroup>
+    <SolutionDir Condition=" '$(SolutionDir)' == '' ">$(MSBuildThisFileDirectory)</SolutionDir>
+    <OutputDir Condition=" '$(OutputDir)' == '' ">$(SolutionDir)Output\</OutputDir>
+    <BaseOutputPath>$(OutputDir)$(MSBuildProjectName)\$(Configuration)\</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)bin</OutputPath>
+    <BaseIntermediateOutputPath>$(BaseOutputPath)obj</BaseIntermediateOutputPath>
+    <PublishDir>$(OutputDir)publish\$(MSBuildProjectName)</PublishDir>
+ </PropertyGroup>
+</Project>
