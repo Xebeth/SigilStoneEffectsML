@@ -4,6 +4,16 @@ Display the effects of sigil stones. I tried to use one term where it made sense
 e.g. Damage Intelligence/Absorb Intelligence => Intelligence\
 Inspired by [Visible Sigil Stone Effects](https://www.nexusmods.com/oblivionremastered/mods/1009).
 
+# Variants
+Combinations of
+- Default sorting, or
+- Sorted first
+
+and optionally
+
+- Tiered (Sigil Stone 1, Sigil Stone 2, Sigil Stone 3, Stigil Stone 4, Stigil Stone 5), or
+- Tiered, Roman numerals (Sigil Stone I, Sigil Stone II, Sigil Stone III, Stigil Stone IV, Stigil Stone V)
+
 ## Install
 
 - Manually download [MagicLoader](https://www.nexusmods.com/oblivionremastered/mods/1966?tab=description) **2.4+** and extract it to:
@@ -43,3 +53,4 @@ Inspired by [Visible Sigil Stone Effects](https://www.nexusmods.com/oblivionrema
 ## Version 1.0.0
 - First stable release
 - Add support for Superior Sigil Stones
+- Add tiered variants (arabic or roman numerals)

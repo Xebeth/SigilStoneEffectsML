@@ -28,6 +28,8 @@ string GenerateFile(string configName)
 
     foreach (var (variant, prefix) in appConfig.Prefixes)
     {
+        variants.Add($"tiered_roman_{variant}", new TieredSigilStoneEffectsTransform(appConfig, prefix, true));
+        variants.Add($"tiered_{variant}", new TieredSigilStoneEffectsTransform(appConfig, prefix, false));
         variants.Add(variant, new SigilStoneEffectsTransform(appConfig, prefix));
     }
 
