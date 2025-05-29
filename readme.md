@@ -25,6 +25,11 @@ Inspired by [Visible Sigil Stone Effects](https://www.nexusmods.com/oblivionrema
 - Run `MagicLoader.exe`.
 - Launch the game, if necessary.
 
+## Compatibility
+- Compatible with [Tools First - Inventory Sorting](https://www.nexusmods.com/oblivionremastered/mods/964) 3.0 (use the standard version of this mod)
+- A separate version of the mod that supports [Superior Sigil Stones](https://www.nexusmods.com/oblivionremastered/mods/3406) can be found in the optional files (with the same variants)
+- Incompatible with any mod changes the name or doesn't correctly reference these same items using their LOC_FN names.
+
 ## Notes
 - You must re-run [MagicLoader](https://www.nexusmods.com/oblivionremastered/mods/1966?tab=description) **2.4+** if I send out any updates to apply them!
 - Safe mid-playthrough, but ALWAYS make backups when adding new mods!
@@ -37,3 +42,4 @@ Inspired by [Visible Sigil Stone Effects](https://www.nexusmods.com/oblivionrema
 # Changelog
 ## Version 1.0.0
 - First stable release
+- Add support for Superior Sigil Stones

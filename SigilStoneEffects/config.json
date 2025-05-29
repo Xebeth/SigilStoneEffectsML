@@ -2,7 +2,6 @@
   "ModName": "SigilStoneEffects",
   "ModFiles": {
     "SigilStoneEffects.json": {
-      "LoadAfter": [ "ToolsFirst_SigilStones.json", "ToolsFirst_AIO.json" ],
       "GlobalEdit": [
         "LOC_FN_SSFireDmgRstFire4",
         "LOC_FN_SSFireDmgRstFire3",

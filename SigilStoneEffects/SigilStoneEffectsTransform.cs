@@ -5,16 +5,22 @@ namespace SigilStoneEffects;
 public class SigilStoneEffectsTransform(SigilStoneEffectsConfig config, string prefix):
     BaseMagicLoaderFileTransform
 {
-    private Dictionary<string, List<string>> Effects => config.Effects;
+    protected Dictionary<string, List<string>> Effects => config.Effects;
 
+    protected readonly string Prefix = prefix;
+
+    protected string Placeholder(string key)
+    {
+        return base.FormatLine(key);
+    }
 
     /// <inheritdoc/>
     protected override string FormatLine(string key)
     {
-        return $"{prefix}{base.FormatLine(key)}{GetEffects(key)}";
+        return $"{Prefix}{Placeholder(key)}{GetEffects(key)}";
     }
 
-    private string GetEffects(string key)
+    protected string GetEffects(string key)
     {
         return Effects.TryGetValue(key, out var list) ? $" ({FormatList(list)})" : string.Empty;
     }

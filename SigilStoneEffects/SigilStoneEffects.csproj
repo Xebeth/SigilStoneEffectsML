@@ -27,6 +27,9 @@
         </None>
         <None Include="$(SolutionDir)readme.md" />
         <None Include="$(SolutionDir)LICENSE" />
+        <None Update="superiorsigil.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
